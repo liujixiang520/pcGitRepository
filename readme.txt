@@ -21,6 +21,16 @@
 
 查看命令历史：git reflog
 
+--------------------------------远程仓库------------------------------------------------
+关联本地git仓库到GitHub远程仓库
+git remote add origin git@github.com:<GitHub账户名>/<GitHub仓库名>.git
+
+把本地库的所有内容推送到远程库上
+git push -u origin master
+
+把本地master分支的最新修改推送至GitHub
+git push origin master
+
 --------------------------------分支管理------------------------------------------------
 查看分支：git branch
 

@@ -50,3 +50,22 @@ $ git clone git@github.com:<GitHub账户名>/<GitHub仓库名>.git
 合并某分支到当前分支：git merge <name>
 
 删除分支：git branch -d <name>
+
+注意：在切换分支时，如果你的分支分支A工作区和缓存区是干净的（即你在A分支commit之后再没做任何更改），你随便往别的分支跳都不会有影响的。
+但是如果你在A分支下有未完成的工作，即你用git status看显示有没有add或者commit的内容，你往B分支checkout的时候，会把你在A分支下的工作带过去。
+
+把当前工作现场“储藏”起来：git stash、git stash save "注释"
+
+查看工作现场：git stash list
+
+查看list中的某一次stash：git stash show stash@{0}
+
+恢复工作区，不删除“存藏（stash）”：git stash apply
+
+恢复工作区，删除“存藏（stash）”：git stash pop
+
+恢复指定的stash：git stash apply stash@{0}
+
+删除stash：git stash drop stash@{0}
+
+
